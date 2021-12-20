@@ -25,6 +25,7 @@ stages:
           cd "C:\Program Files\IBM\ACE\11.0.0.8\server\bin"
           mqsiprofile.cmd 
           mqsilist
+          mqsilist
     # - task: PowerShell@2
     #   inputs:
     #     targetType: 'inline'
