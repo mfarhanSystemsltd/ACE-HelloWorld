@@ -23,7 +23,7 @@ stages:
       inputs:
         targetType: 'inline'
         script: |
-          cd C:\Program Files\IBM\ACE\11.0.0.8
+          cd 'C:\Program Files\IBM\ACE\11.0.0.8'
           ace.cmd
           mqsilist
     # - task: Docker@2
