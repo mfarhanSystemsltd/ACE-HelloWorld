@@ -18,9 +18,12 @@ stages:
   jobs:
   - job: Build
     displayName: Build
-    pool:
-      vmImage: ubuntu-latest
     steps:
+    - task: IBMIntegrationBusCommand@1
+      inputs:
+        iibEndpoint: 'app-connect'
+        cmd: 'mqsilist'
+        args: '-a'
     - task: Docker@2
       inputs:
         containerRegistry: 'dockerhub-connection'
