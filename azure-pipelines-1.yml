@@ -23,7 +23,7 @@ stages:
       inputs:
         iibEndpoint: 'app-connect'
         cmd: 'mqsilist'
-        args: '-a'
+        args: '-d'
     - task: Docker@2
       inputs:
         containerRegistry: 'dockerhub-connection'
