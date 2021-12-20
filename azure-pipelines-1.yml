@@ -22,7 +22,7 @@ stages:
     - task: CmdLine@2
       inputs:
         script: |
-          cd 'C:\Program Files\IBM\ACE\11.0.0.8\server\bin'
+          cd "C:\Program Files\IBM\ACE\11.0.0.8\server\bin"
           mqsiprofile.cmd 
           mqsilist
     # - task: PowerShell@2
