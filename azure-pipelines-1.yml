@@ -21,18 +21,18 @@ stages:
     steps:
     - task: IBMIntegrationBusDeploy@1
       inputs:
-        barPath: '**/*.bar'
+        barPath: '*.bar'
         iibEndpoint: 'app-connect'
         integrationServerName: 'test'
         completeDeployment: true
-    - task: Docker@2
-      inputs:
-        containerRegistry: 'dockerhub-connection'
-        repository: 'mfarhan1998/ace-test'
-        command: 'buildAndPush'
-        Dockerfile: '**/Dockerfile'
+    # - task: Docker@2
+    #   inputs:
+    #     containerRegistry: 'dockerhub-connection'
+    #     repository: 'mfarhan1998/ace-test'
+    #     command: 'buildAndPush'
+    #     Dockerfile: '**/Dockerfile'
         
-    - task: CmdLine@2
-      inputs:
-          script: 'docker images'
+    # - task: CmdLine@2
+    #   inputs:
+    #       script: 'docker images'
           
