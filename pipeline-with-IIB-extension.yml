@@ -18,7 +18,7 @@ steps:
 - task: IBMIntegrationBusCommand@1
   inputs:
     iibEndpoint: 'app-connect'
-    cmd: 'mqsicreatebar -data $(Build.Repository.LocalPath) -b $(Build.Repository.LocalPath)/Hello_$(Build.BuildNumber).bar -a HelloWorld'
+    cmd: 'mqsibar -data $(Build.Repository.LocalPath) -b $(Build.Repository.LocalPath)/Hello_$(Build.BuildNumber).bar -a HelloWorld'
     args: '-deployAsSource -v createbartrace.txt -cleanBuild'
 
 - task: IBMIntegrationBusDeploy@1
