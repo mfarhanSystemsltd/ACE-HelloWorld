@@ -15,15 +15,15 @@ steps:
     filename: 'C:\Program Files\IBM\ACE\11.0.0.8\server\bin\mqsiprofile.cmd'
     modifyEnvironment: true
     
-- task: IBMIntegrationBusCommand@1
-  inputs:
-    iibEndpoint: 'app-connect'
-    cmd: 'mqsicreatebar -data $(Build.Repository.LocalPath) -b $(Build.Repository.LocalPath)\Hello_$(Build.BuildNumber).bar -a HelloWorld -deployAsSource -v createbartrace.txt'
-    args: '-cleanBuild'
+# - task: IBMIntegrationBusCommand@1
+#   inputs:
+#     iibEndpoint: 'app-connect'
+#     cmd: 'mqsicreatebar -data $(Build.Repository.LocalPath) -b $(Build.Repository.LocalPath)\Hello_$(Build.BuildNumber).bar -a HelloWorld -deployAsSource -v createbartrace.txt'
+#     args: '-cleanBuild'
 
 - task: IBMIntegrationBusDeploy@1
   inputs:
-    barPath: '**/Hello_$(Build.BuildNumber).bar'
+    barPath: '**/*.bar'
     iibEndpoint: 'app-connect'
     integrationServerName: 'test-eg'
     completeDeployment: true
