@@ -23,7 +23,7 @@ steps:
 
 - task: IBMIntegrationBusDeploy@1
   inputs:
-    barPath: '**/*.bar'
+    barPath: '**/Hello_$(Build.BuildID).bar'
     iibEndpoint: 'app-connect'
     integrationServerName: 'test-eg'
     completeDeployment: true
