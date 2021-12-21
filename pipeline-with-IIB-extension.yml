@@ -18,8 +18,8 @@ steps:
 - task: IBMIntegrationBusCommand@1
   inputs:
     iibEndpoint: 'app-connect'
-    cmd: 'mqsicreatebar -data $(Build.Repository.LocalPath)\HelloWorld -b $(Build.Repository.LocalPath)\Hello_$(Build.BuildID).bar -a HelloWorld -deployAsSource -v createbartrace.txt -cleanBuild'
-    args: '-d'
+    cmd: 'mqsicreatebar'
+    args: '-data $(Build.Repository.LocalPath)\HelloWorld -b $(Build.Repository.LocalPath)\Hello_$(Build.BuildID).bar -a HelloWorld -deployAsSource -v createbartrace.txt -cleanBuild'
 
 - task: IBMIntegrationBusDeploy@1
   inputs:
