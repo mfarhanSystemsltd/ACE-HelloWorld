@@ -20,7 +20,12 @@ steps:
     iibEndpoint: 'app-connect'
     cmd: 'mqsicreatebar'
     args: '-data $(Build.Repository.LocalPath) -b $(Build.Repository.LocalPath)\Hello_$(Build.BuildID).bar -a HelloWorld -deployAsSource -v createbartrace.txt -cleanBuild'
-
+- task: Docker@2
+  inputs:
+    containerRegistry: 'dockerhub-connection'
+    repository: 'mfarhan1998/ace-test'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
 - task: IBMIntegrationBusDeploy@1
   inputs:
     barPath: '**/Hello_$(Build.BuildID).bar'
