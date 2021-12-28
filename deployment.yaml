@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: ace-deployment
   labels:
-    app: node-farhan
+    app: ace
 spec:
   replicas: 2
   selector:
@@ -37,5 +37,5 @@ spec:
       targetPort: 7600
       nodePort: 30001
   externalIPs:
-    - 52.146.37.196
+    - 192.168.100.95
   type: NodePort
