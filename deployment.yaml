@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: ace
-        image: public.ecr.aws/i6q3l8q9/ace-test:74
+        image: public.ecr.aws/i6q3l8q9/ace-test:75
         imagePullPolicy: Always
         ports:
         - containerPort: 7600
