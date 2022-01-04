@@ -16,10 +16,12 @@ spec:
     spec:
       containers:
       - name: ace
-        image: public.ecr.aws/i6q3l8q9/ace-test:1
+        image: 736505676141.dkr.ecr.us-east-2.amazonaws.com/ace-test:7
         imagePullPolicy: Always
         ports:
         - containerPort: 7600
+      imagePullSecrets:
+          - name: regcred
 
 ---
 
