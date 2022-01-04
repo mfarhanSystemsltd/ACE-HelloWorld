@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: ace
-        image: 736505676141.dkr.ecr.us-east-2.amazonaws.com/ace-test:**build_num**
+        image: 736505676141.dkr.ecr.us-east-2.amazonaws.com/ace-test:26
         imagePullPolicy: Always
         ports:
         - containerPort: 7600
