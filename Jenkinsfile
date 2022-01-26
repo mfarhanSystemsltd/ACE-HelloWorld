@@ -1,13 +1,13 @@
 pipeline {
     agent {
-		label 'kubeagent'
-	}
+	label 'kubeagent'
+    }
     stages {
         stage('Hello') {
             steps {
-					withCredentials([file(credentialsId: 'mykubeconfig', variable: 'KUBECONFIG')]) {
-						sh 'kubectl get pods'
-					}
+		kubeconfig(credentialsId: 'mykubeconfig', serverUrl: '') {
+		    sh 'kubectl get pods'
+		}
             }
         }
     }
