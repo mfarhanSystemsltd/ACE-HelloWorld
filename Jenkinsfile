@@ -1,17 +1,13 @@
 pipeline {
     agent {
-		kubeagent {
-		  yamlFile 'builder.yaml'
-		}
+		label 'kubeagent'
 	}
     stages {
         stage('Hello') {
             steps {
-                container('kubectl') {
 					withCredentials([file(credentialsId: 'mykubeconfig', variable: 'KUBECONFIG')]) {
 						sh 'kubectl get pods'
 					}
-				}	
             }
         }
     }
