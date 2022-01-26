@@ -1,6 +1,6 @@
 pipeline {
     agent {
-	label 'kubeagent'
+	label 'kubernetes'
     }
     stages {
         stage('Hello') {
