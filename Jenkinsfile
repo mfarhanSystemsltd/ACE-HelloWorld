@@ -1,10 +1,7 @@
 pipeline {
 	agent {
-		kubeagent {
-		  yamlFile 'builder.yaml'
-		}
-	}
-
+  label 'kubeagent'
+}
 	stages {
 		stage('Deploy App to Kubernetes') {     
 			steps {
