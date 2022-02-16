@@ -21,7 +21,7 @@ spec:
         ports:
         - containerPort: 7600
         imagePullSecrets:
-           - name: regcred
+        - name: regcred
 
 ---
 
