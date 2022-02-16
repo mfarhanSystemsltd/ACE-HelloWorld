@@ -16,12 +16,12 @@ spec:
     spec:
       containers:
       - name: ace
-        image: mfarhan1998/ace-test:74
+        image: mfarhan1998/ace-test:78
         imagePullPolicy: Always
         ports:
         - containerPort: 7600
-#       imagePullSecrets:
-#           - name: regcred
+        imagePullSecrets:
+           - name: regcred
 
 ---
 
