@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: ace
-        image: mfarhan1998/ace-test:67
+        image: mfarhan1998/ace-test:74
         imagePullPolicy: Always
         ports:
         - containerPort: 7600
