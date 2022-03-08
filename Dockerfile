@@ -1,4 +1,4 @@
-#Testing webhook
+#Testing webhook1
 FROM ibmcom/ace-mqclient:latest
 #FROM 736505676141.dkr.ecr.us-east-2.amazonaws.com/ace-base-image:latest
 ADD *.bar /home/aceuser/initial-config/bars/
