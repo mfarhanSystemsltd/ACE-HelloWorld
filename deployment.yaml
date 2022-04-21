@@ -30,7 +30,7 @@ spec:
         ports:
         - containerPort: 7600
       imagePullSecrets:
-      - name: ecr-cred
+      - name: mfarhan-cred
 ---
 
 apiVersion: v1
