@@ -19,14 +19,6 @@ spec:
       - name: ace
         image: mfarhan1998/ace-test:test
         imagePullPolicy: Always
-        livenessProbe:
-           httpGet:
-            path: /
-            port: 3002
-        readinessProbe:
-          httpGet:
-            path: /
-            port: 3002
         ports:
         - containerPort: 7600
       imagePullSecrets:
